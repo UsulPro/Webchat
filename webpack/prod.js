@@ -8,16 +8,17 @@ const env = process.env.NODE_ENV || 'development'
 
 module.exports = {
 
-  entry: ['babel-polyfill', './src/script.js'],
+  // entry: ['babel-polyfill', './src/script.js'],
+  entry: ['./src/script.js'],
 
   resolve: {
     modules: ['../src', '../node_modules'].map(p => path.resolve(__dirname, p)),
   },
 
   output: {
-    path: path.join(__dirname, '../dist'),
+    path: path.join(__dirname, '../../public/lk/techservices/'),
     filename: 'webchat.js',
-    publicPath: '/dist/',
+    publicPath: '/techservices/',
   },
 
   module: {

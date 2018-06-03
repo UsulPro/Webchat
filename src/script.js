@@ -6,6 +6,10 @@ import { store } from 'store'
 import { getChannelPreferences } from 'actions/channel'
 import App from 'containers/App'
 
+if (!global._babelPolyfill) {
+  require('babel-polyfill')
+}
+
 document.body.innerHTML += '<div id="recast-webchat-div"></div>'
 const root = document.getElementById('recast-webchat-div')
 const script = document.currentScript || document.getElementById('recast-webchat')
