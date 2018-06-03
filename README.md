@@ -1,3 +1,7 @@
+# Skolkovo Techservices Chatbot
+
+> forked from Recast.AI Webcha
+
 <div align="center">
   <img src="assets/header.png" />
 </div>
