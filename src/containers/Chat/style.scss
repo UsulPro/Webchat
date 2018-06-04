@@ -11,7 +11,7 @@
 
   &.open {
     // transform: scaleX(1);
-    left: 300px;
+    left: calc(50% - 235px);
     opacity: 1;
     overflow: hidden;
   }
