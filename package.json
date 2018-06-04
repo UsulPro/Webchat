@@ -9,6 +9,7 @@
     "build:webpack": "node bin/build.js",
     "build:js": "babel src -d lib",
     "start": "npm run clean && node bin/build-dev",
+    "dev": "webpack --config ./webpack/dev.js --watch --progress",
     "lib": "npm run clean && node bin/build-lib",
     "prettier": "prettier --write \"src/**/*.?(js|?(s)css|json)\" && eslint --fix src",
     "lint": "eslint src",

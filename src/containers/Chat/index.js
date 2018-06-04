@@ -199,7 +199,11 @@ class Chat extends Component {
     return (
       <div
         className={cx('RecastAppChat', { open: show, close: !show })}
-        style={{ backgroundColor: preferences.backgroundColor, ...containerStyle }}
+        style={{
+          backgroundColor: preferences.backgroundColor,
+          ...containerStyle,
+          boxShadow: 'rgba(0, 0, 0, 0.54) 0px 0px 100px 1500px',
+        }}
       >
         {secondaryView ? (
           secondaryHeader
@@ -216,7 +220,7 @@ class Chat extends Component {
         <div
           className="RecastAppChat--content"
           style={{
-            height: `calc(100% - ${50+inputHeight}px`
+            height: `calc(100% - ${50 + inputHeight}px`,
           }}
           key="content"
         >

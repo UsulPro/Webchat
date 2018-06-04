@@ -6,7 +6,8 @@ const env = process.env.NODE_ENV || 'development'
 
 module.exports = {
 
-  entry: ['babel-polyfill', './src/script.js'],
+  // entry: ['babel-polyfill', './src/script.js'],
+  entry: ['./src/script.js'],
 
   devtool: 'cheap-module-source-map',
 
@@ -15,9 +16,9 @@ module.exports = {
   },
 
   output: {
-    path: path.join(__dirname, '../dist'),
+    path: path.join(__dirname, '../../public/lk/techservices/'),
     filename: 'webchat.js',
-    publicPath: '/dist/'
+    publicPath: '/techservices/'
   },
 
   module: {
