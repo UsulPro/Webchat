@@ -219,9 +219,9 @@ class Chat extends Component {
         )}
         <div
           className="RecastAppChat--content"
-          style={{
-            height: `calc(100% - ${50 + inputHeight}px`,
-          }}
+          // style={{
+          //   height: `calc(100% - ${50 + inputHeight}px`,
+          // }}
           key="content"
         >
           {secondaryView

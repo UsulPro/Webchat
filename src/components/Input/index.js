@@ -63,30 +63,30 @@ class Input extends Component {
           this.inputContainer = ref
         }}
       >
-        <textarea
-          ref={i => (this._input = i)}
-          value={value}
-          style={{ width: '100%', /* maxHeight: 70, */ resize: 'none', height: 44 }}
-          className="RecastTextarea"
-          placeholder={'Напишите сообщение...'}
-          onChange={e => this.setState({ value: e.target.value }, this.autoGrow)}
-          onKeyPress={e => {
-            if (e.key === 'Enter') {
-              this.sendMessage()
-              e.preventDefault()
-            }
-          }}
-          rows={1}
-        />
-        <div
-        style={{ position: 'absolute',
-        right: 22, top: 22,
-        // backgroundColor: 'brown',
-        height: 30, width: 30,
-         }}>
-          <img src="/techservices/images/chatbot_send.png"></img>
-         </div>
-        <div>
+        <div className="InputControl">
+          <textarea
+            ref={i => (this._input = i)}
+            value={value}
+            style={{ width: '100%', /* maxHeight: 70, */ resize: 'none', height: 44 }}
+            className="RecastTextarea"
+            placeholder={'Напишите сообщение...'}
+            onChange={e => this.setState({ value: e.target.value }, this.autoGrow)}
+            onKeyPress={e => {
+              if (e.key === 'Enter') {
+                this.sendMessage()
+                e.preventDefault()
+              }
+            }}
+            rows={1}
+          />
+          <div
+            className="InputButton"
+            onClick={this.sendMessage}
+          >
+            <img src="/techservices/images/chatbot_send.png" />
+          </div>
+        </div>
+        <div style={{ marginTop: 10 }}>
           <span className="RecastAnotation">Начать заново</span>
           <span className="RecastAnotation">Обратный звонок</span>
         </div>

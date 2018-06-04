@@ -1,7 +1,9 @@
 .RecastApp .RecastAppHeader {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   border-radius: 0;
+  position: initial;
+  height: 54px;
 
   &--logo {
     height: 50px;
@@ -16,9 +18,9 @@
 
   &--btn {
     cursor: pointer;
-    margin: 1rem;
-    width: 15px;
-    height: 15px;
+    margin: 26px 26px 0px 0px;
+    width: 13px;
+    height: 13px;
   }
 }
 

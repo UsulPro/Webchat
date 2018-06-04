@@ -9,22 +9,29 @@
   transition: left 0.3s, opacity 0.6s;
   transform-origin: right;
 
+  display: flex;
+  flex-direction: column;
+
+  left: calc(50% - 235px);
+    opacity: 1;
+    overflow: hidden;
+
   &.open {
-    // transform: scaleX(1);
     left: calc(50% - 235px);
     opacity: 1;
     overflow: hidden;
   }
 
-  &.close {
-    // transform: scaleX(0);
-    left: 2000px;
-    opacity: 0;
-    overflow: hidden;
-  }
+  // &.close {
+  //   left: 2000px;
+  //   opacity: 0;
+  //   overflow: hidden;
+  // }
 
   &--content {
     position: relative;
+    flex-grow: 1;
+    height: 100px;
   }
 
   &--slogan {
@@ -58,8 +65,8 @@
     border-radius: 10px;
     top: 30px;
     left: auto;
-    width: 470px;
-    height: auto;
+    width: 602px;
+    height: 563px;
     box-shadow: 0 5px 40px rgba(0, 0, 0, 0.16);
 
     &--slogan {
