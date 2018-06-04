@@ -54,16 +54,20 @@ class QuickReplies extends Component {
         <Text content={title} style={style} />
 
         {displayQuickReplies && (
-          <Slider
-            arrows={showArrow}
-            variableWidth
-            speed={200}
-            infinite={false}
-            draggable={false}
-            prevArrow={<PrevArrow />}
-            nextArrow={<NextArrow />}
-            className="RecastAppSlider RecastAppQuickReplies--slider"
-          >
+          // <Slider
+          //   arrows={showArrow}
+          //   variableWidth
+          //   speed={200}
+          //   infinite={false}
+          //   draggable={false}
+          //   // prevArrow={<PrevArrow />}
+          //   // nextArrow={<NextArrow />}
+          //   className="RecastAppSlider RecastAppQuickReplies--slider"
+          // >
+          <div style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+          }}>
             {buttons.map((b, i) => (
               <div
                 ref={ref => {
@@ -75,12 +79,14 @@ class QuickReplies extends Component {
                 style={{
                   border: `1px solid ${style.accentColor}`,
                   color: style.accentColor,
+                  margin: 6,
                 }}
               >
                 {truncate(b.title, 20)}
               </div>
             ))}
-          </Slider>
+          {/* </Slider> */}
+            </div>
         )}
       </div>
     )

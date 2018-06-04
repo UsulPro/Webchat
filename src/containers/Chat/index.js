@@ -38,7 +38,7 @@ import './style.scss'
 class Chat extends Component {
   state = {
     messages: this.props.messages,
-    showSlogan: true,
+    showSlogan: false,
     inputHeight: 50, // height of input (default: 50px)
   }
 
@@ -245,7 +245,7 @@ class Chat extends Component {
                     'RecastAppChat--slogan--hidden': !showSlogan,
                   })}
                 >
-                  {'We run with Recast.AI'}
+                  {''}
                 </div>,
               ]}
         </div>
