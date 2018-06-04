@@ -19,6 +19,8 @@ const token = script.getAttribute('token')
 
 if (root && channelId && token) {
   getChannelPreferences(channelId, token).then(preferences => {
+    preferences.headerColor = '#FFFFFF';
+
     ReactDOM.render(
       <Provider store={store}>
         <App token={token} channelId={channelId} preferences={preferences} />

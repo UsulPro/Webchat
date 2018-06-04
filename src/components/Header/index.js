@@ -8,15 +8,16 @@ const Header = ({ closeWebchat, preferences, logoStyle }) => (
     className="RecastAppHeader"
     style={{
       color: preferences.complementaryColor,
-      backgroundColor: preferences.accentColor,
+      backgroundColor: preferences.headerColor,
+      flexDirection: 'row-reverse',
     }}
   >
-    <img className="RecastAppHeader--logo" src={preferences.headerLogo} style={logoStyle} />
+    {/* <img className="RecastAppHeader--logo" src={preferences.headerLogo} style={logoStyle} />
 
-    <div className="RecastAppHeader--title">{preferences.headerTitle}</div>
+    <div className="RecastAppHeader--title">{preferences.headerTitle}</div> */}
 
     <div className="RecastAppHeader--btn" onClick={closeWebchat}>
-      <img src="https://cdn.recast.ai/webchat/close.svg" />
+      <img src="/images/close.svg" style={{opacity: 0.5}} />
     </div>
   </div>
 )

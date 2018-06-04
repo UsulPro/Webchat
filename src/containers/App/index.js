@@ -55,6 +55,7 @@ class App extends Component {
     }
 
     this.props.setCredentials(payload)
+    window.webchatToggle = this.toggleChat;
   }
 
   componentWillReceiveProps(nextProps) {
@@ -147,12 +148,12 @@ class App extends Component {
           href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
         />
 
-        <Expander
+        {/* <Expander
           show={!expanded}
           onClick={this.toggleChat}
           preferences={preferences}
           style={expanderStyle}
-        />
+        /> */}
 
         <Chat
           show={expanded}

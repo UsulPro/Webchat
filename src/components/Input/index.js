@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { isBrowserIE } from 'helpers';
+import { isBrowserIE } from 'helpers'
 
 import './style.scss'
 
@@ -24,7 +24,7 @@ class Input extends Component {
     if (!this.state.value) {
       // Dirty fix textarea placeholder to reset style correctly
       setTimeout(() => {
-        this._input.style.height = '18px'
+        // this._input.style.height = '18px'
         this._input.value = isBrowserIE() ? '' : null
         this.onInputHeight()
       }, 100)
@@ -49,8 +49,8 @@ class Input extends Component {
   }
 
   autoGrow = () => {
-    this._input.style.height = '18px'
-    this._input.style.height = this._input.scrollHeight + 'px'
+    // this._input.style.height = '18px'
+    // this._input.style.height = this._input.scrollHeight + 'px'
   }
 
   render() {
@@ -66,8 +66,9 @@ class Input extends Component {
         <textarea
           ref={i => (this._input = i)}
           value={value}
-          style={{ width: '100%', maxHeight: 70, resize: 'none' }}
-          placeholder={'Write a reply...'}
+          style={{ width: '100%', /* maxHeight: 70, */ resize: 'none', height: 44 }}
+          className="RecastTextarea"
+          placeholder={'Напишите сообщение...'}
           onChange={e => this.setState({ value: e.target.value }, this.autoGrow)}
           onKeyPress={e => {
             if (e.key === 'Enter') {
@@ -77,6 +78,18 @@ class Input extends Component {
           }}
           rows={1}
         />
+        <div
+        style={{ position: 'absolute',
+        right: 22, top: 22,
+        // backgroundColor: 'brown',
+        height: 30, width: 30,
+         }}>
+          <image src="/techservices/images/chatbot_send.png"></image>
+         </div>
+        <div>
+          <span className="RecastAnotation">Начать заново</span>
+          <span className="RecastAnotation">Обратный звонок</span>
+        </div>
       </div>
     )
   }
