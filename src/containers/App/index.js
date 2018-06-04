@@ -13,6 +13,8 @@ import './style.scss'
 const NO_LOCALSTORAGE_MESSAGE =
   'Sorry, your browser does not support web storage. Are you in localhost ?'
 
+export let onReceiveMessages;
+
 @connect(
   state => ({
     isReady: state.conversation.conversationId,
@@ -104,7 +106,8 @@ class App extends Component {
     }
   }
 
-  toggleChat = () => {
+  toggleChat = (cb) => {
+    onReceiveMessages = cb || onReceiveMessages;
     const { clearMessagesOnclose } = this.props
     this.setState({ expanded: !this.state.expanded }, () => {
       if (!this.state.expanded && clearMessagesOnclose) {

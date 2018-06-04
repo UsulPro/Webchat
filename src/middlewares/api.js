@@ -2,6 +2,8 @@ import config from 'config'
 import qs from 'query-string'
 import axios from 'axios'
 
+import { onReceiveMessages } from '../containers/App';
+
 export default store => next => action => {
   if (!action.type.startsWith('API:')) {
     return next(action)
@@ -25,6 +27,8 @@ export default store => next => action => {
   return axios(options)
     .then(res => {
       dispatch({ type: `${prefix}_SUCCESS`, payload: { ...res.data.results } })
+      console.log('Webchat:', { ...res.data.results });
+      onReceiveMessages({ ...res.data.results });
       return res.data.results
     })
     .catch(err => {
