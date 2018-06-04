@@ -84,7 +84,7 @@ class Input extends Component {
         // backgroundColor: 'brown',
         height: 30, width: 30,
          }}>
-          <image src="/techservices/images/chatbot_send.png"></image>
+          <img src="/techservices/images/chatbot_send.png"></img>
          </div>
         <div>
           <span className="RecastAnotation">Начать заново</span>
