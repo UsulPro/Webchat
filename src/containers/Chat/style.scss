@@ -22,11 +22,11 @@
     overflow: hidden;
   }
 
-  // &.close {
-  //   left: 2000px;
-  //   opacity: 0;
-  //   overflow: hidden;
-  // }
+  &.close {
+    left: 2000px;
+    opacity: 0;
+    overflow: hidden;
+  }
 
   &--content {
     position: relative;
