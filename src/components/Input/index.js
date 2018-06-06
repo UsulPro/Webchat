@@ -86,10 +86,10 @@ class Input extends Component {
             <img src="/techservices/images/chatbot_send.png" />
           </div>
         </div>
-        <div style={{ marginTop: 10 }}>
+        {/* <div style={{ marginTop: 10 }}>
           <span className="RecastAnotation">Начать заново</span>
           <span className="RecastAnotation">Обратный звонок</span>
-        </div>
+        </div> */}
       </div>
     )
   }
