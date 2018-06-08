@@ -27,7 +27,6 @@ export default store => next => action => {
   return axios(options)
     .then(res => {
       dispatch({ type: `${prefix}_SUCCESS`, payload: { ...res.data.results } })
-      console.log('Webchat:', { ...res.data.results });
       // onReceiveMessages || onReceiveMessages({ ...res.data.results });
       return res.data.results
     })
